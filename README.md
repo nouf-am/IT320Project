@@ -1,6 +1,6 @@
  https://bunyan.teleporthq.app
 # IT320Project
-# Bunyan Project - A Digital Real Estate Transaction Platform
+## Bunyan Project - A Digital Real Estate Transaction Platform
 
 ## Introduction
 The Bunyan project is a digital platform aimed at facilitating real estate transactions in Riyadh by directly connecting buyers, sellers, and investors. Bunyan provides a seamless experience for searching, listing, and investing in properties.
