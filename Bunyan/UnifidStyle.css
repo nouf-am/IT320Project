@@ -1,0 +1,182 @@
+/* styles.css */
+html {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.55;
+  color: #000;
+  background-color: #fff;
+  fill: #000;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 100px; /* تأكيد أن المحتوى لا يصعد للأعلى */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button {
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Navbar Styling */
+.navbar4-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f7f7f7;
+  padding: 16px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+
+.navbar4-navbar-interactive {
+  width: 100%;
+  display: flex;
+  max-width: 1400px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar4-image1 {
+  width: 50px;
+  height: 50px;
+  box-shadow: 20px 5px 10px 0px #d4d4d4;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.navbar4-desktop-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navbar4-action11 {
+  background-color: #1d638b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar4-desktop-menu a {
+  background: none;
+  color: #1d638b;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-text {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Styling for Cards */
+.property-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.explore-btn {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #286690;
+}
+
+/* Footer */
+footer {
+  background-color: #286690;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; /* يجعل الفوتر في الأسفل */
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .social-icons a {
+  margin: 0 15px;
+}
+
+footer .social-icons img {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%);
+}
+

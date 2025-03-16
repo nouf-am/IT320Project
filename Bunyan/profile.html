@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="UnifidStyle.css" />
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f9f9ff, #f9fff9); /* Light blue to light green gradient */
+    }
+
+    /* Profile Section */
+    .profile-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .profile-card {
+      background-color: white;
+      width: 100%;
+      max-width: 450px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+    }
+
+    .profile-card h2 {
+      color: #286690; /* Light blue */
+      margin: 10px 0;
+    }
+
+    .profile-card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .profile-card .role {
+      margin-top: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 25px;
+      font-weight: bold;
+      color: #286690;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .profile-card .links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .profile-card .links a {
+      color: #1e4e70; /* Darker blue */
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 1px solid #286690;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .profile-card .links a:hover {
+      background-color: #286690;
+      color: white;
+    }
+
+
+    .profile-image-container {
+      position: relative;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center; /* Aligns the image horizontally */
+      align-items: center; /* Aligns the image vertically */
+    }
+
+    .profile-image-container img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #286690;
+      cursor: pointer;
+    }
+
+
+    .profile-image-container input {
+      display: none;
+    }
+
+    .profile-card .chat-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #286690;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+
+    .profile-card .chat-icon:hover {
+      background-color: #1e4e70;
+    }
+
+    /* Role Selector (Oval shape) */
+    .role-select-container {
+      position: relative;
+      margin-top: 10px;
+    }
+
+    .role-select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 25px;
+      font-size: 1rem;
+      color: #333;
+      background-color: #f9f9f9; /* Light gray */
+      border: 1px solid #ddd;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .role-select option {
+      padding: 10px;
+    }
+
+    /* Mobile Support */
+    @media (max-width: 768px) {
+      .profile-card {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .profile-image-container img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar4-container">
+  <div class="navbar4-navbar-interactive">
+    <a href="index.html" class="navbar4-navlink">
+      <img src="logo.png" alt="Logo" class="navbar4-image1" />
+    </a>
+    <div class="navbar4-desktop-menu">
+      <a href="index.html">Home Page</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="investment.html">Investment</a>
+      <a href="residential.html">Properties</a>
+    </div>
+    <a href="log-in.html" class="navbar4-action11">LogIn</a>
+  </div>
+</header>
+<div class="profile-container">
+  <div class="profile-card">
+    <!-- Chat Icon -->
+    <div class="chat-icon" onclick="openChat()">💬</div>
+
+    <!-- Profile Image -->
+    <div class="profile-image-container">
+      <img src="https://via.placeholder.com/120" alt="Profile Image" onclick="uploadImage()" />
+      <input type="file" id="profileImageInput" onchange="previewImage()" />
+    </div>
+
+    <!-- Profile Details -->
+    <h2>aljwharah</h2>
+    <p>Email: aljwharah@example.com</p>
+
+    <!-- Role Selector (Multiple Roles) -->
+    <div class="role-select-container">
+      <select class="role-select" id="roleSelect">
+        <option value="buyer">Buyer</option>
+        <option value="seller">Seller</option>
+        <option value="investor">Investor</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="links">
+      <a href="property-link.html" target="_blank">View Your Property</a><br><br>
+      <a href="change_pass.html" target="_blank">Change Your Password</a>
+    </div>
+
+
+  </div>
+</div>
+<footer>
+  <p>&copy; 2025 Bunyan. All Rights Reserved.</p>
+  <a href="about_us.html">About Us</a>
+  <a href="contact_us.html">Contact Us</a>
+  <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=FFFFFF" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="https://shop.alharamainperfumes.com/media/wysiwyg/social_media_icon-02.png" alt="Facebook" />
+    </a>
+    <a href="https://wa.me/" target="_blank">
+      <img src="https://img.icons8.com/?size=100&id=118638&format=png&color=FFFFFF" alt="WhatsApp" />
+    </a>
+  </div>
+</footer>
+
+<script>
+  // JavaScript to navigate to a random section
+  document.getElementById('exploreBtn').addEventListener('click', function() {
+    const sections = ['#investments', '#sale', '#rent'];
+    const randomSection = sections[Math.floor(Math.random() * sections.length)];
+    document.querySelector(randomSection).scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
+<script>
+  // Function to open chat (Placeholder for actual chat functionality)
+  function openChat() {
+    alert("Chat function will be added here!");
+  }
+
+  // Function to allow profile image upload
+  function uploadImage() {
+    document.getElementById("profileImageInput").click();
+  }
+
+  // Preview uploaded image
+  function previewImage() {
+    const file = document.getElementById("profileImageInput").files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        document.querySelector(".profile-image-container img").src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  // Function to show selected role (for demonstration)
+  document.getElementById("roleSelect").addEventListener("change", function () {
+    alert("Selected Role: " + this.value);
+  });
+</script>
+</body>
+</html>

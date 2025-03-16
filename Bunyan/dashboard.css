@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #F9F9F9;
+    --blue: #2A5D84;
+    --light-blue: #6FA3C1;
+
+    --grey: #E0E6ED;
+    --dark-grey: #6C7A89;
+    --dark: #1E2D3D;
+
+    --red: #D64545;
+    --yellow: #E8A317;
+    --light-yellow: #FCEBB6;
+    --orange: #E67E22;
+    --light-orange: #FFD5B5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--grey);
+    font-family: var(--poppins);
+    overflow-x: hidden;
+}
+/* Breadcrumb Styling */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--dark-grey);
+    padding: 10px 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li a {
+    color: var(--blue);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb li a:hover {
+    color: var(--light-blue);
+}
+
+.breadcrumb li i {
+    margin: 0 8px;
+    font-size: 16px;
+    color: var(--dark-grey);
+}
+
+.breadcrumb .active {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+/* SIDEBAR */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background: var(--light);
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    padding: 10px 0;
+}
+
+#sidebar.hide {
+    width: 60px;
+}
+
+#sidebar .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+#sidebar .brand img {
+    width: 120px;
+    transition: width 0.3s ease;
+}
+
+#sidebar.hide .brand img {
+    width: 40px;
+}
+
+#sidebar .side-menu {
+    margin-top: 20px;
+    padding: 0;
+}
+
+#sidebar .side-menu li {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 48px 0 0 48px;
+    padding: 4px 10px;
+    margin-left: 6px;
+    transition: 0.3s ease;
+}
+
+#sidebar .side-menu li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    color: var(--dark);
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+#sidebar .side-menu li a .bx {
+    min-width: 50px;
+    font-size: 24px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+#sidebar .side-menu li a span {
+    transition: opacity 0.3s ease;
+}
+
+#sidebar.hide .side-menu li a {
+    justify-content: center;
+}
+
+#sidebar.hide .side-menu li a span {
+    display: none;
+}
+
+/* تعديل محاذاة الـ Content عند التصغير */
+#content {
+    position: relative;
+    width: calc(100% - 280px); /* يترك مساحة للسايد بار */
+    left: 280px; /* يضمن أن الفوتر ليس تحت السايد بار */
+    transition: .3s ease;
+}
+
+#sidebar.hide ~ #content {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+
+
+
+/* NAVBAR */
+#content nav {
+    height: 56px;
+    background: var(--light);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--lato);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.notification .num {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--red);
+    color: var(--light);
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.property-list img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.dashboard-card img {
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Property Table - Fix Image Size */
+table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Ensure Table Cells Align Properly */
+table td {
+    vertical-align: middle;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+table p {
+    font-size: 14px;
+    margin: 0;
+    display: inline-block;
+}
+
+/* MAIN CONTENT */
+#content main {
+    width: 100%;
+    padding: 36px 24px;
+    font-family: var(--poppins);
+}
+
+/* INFO CARDS */
+#content main .box-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-top: 36px;
+}
+
+#content main .box-info li {
+    padding: 24px;
+    background: var(--light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+}
+
+#content main .box-info li .bx {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content main .box-info li:nth-child(1) .bx {
+    background: var(--light-blue);
+    color: var(--blue);
+}
+
+#content main .box-info li:nth-child(2) .bx {
+    background: var(--light-yellow);
+    color: var(--yellow);
+}
+
+#content main .box-info li:nth-child(3) .bx {
+    background: var(--light-orange);
+    color: var(--orange);
+}
+
+#content main .box-info li .text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+#content main .box-info li .text p {
+    color: var(--dark);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+    }
+    #content {
+        width: calc(100% - 60px);
+        left: 200px;
+    }
+    #content nav .nav-link {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #content nav form .form-input input {
+        display: none;
+    }
+    #content nav form .form-input button {
+        width: auto;
+        background: transparent;
+        color: var(--dark);
+    }
+    #content nav form.show .form-input input {
+        display: block;
+        width: 100%;
+    }
+}
+#content nav form.show ~ .notification,
+#content nav form.show ~ .profile {
+    display: none;
+}
+#content main .box-info {
+    grid-template-columns: 1fr;
+}
+
+.navbar4-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--light);
+    border-bottom: 1px solid var(--grey);
+}
+
+.navbar4-navbar-interactive {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    padding: 16px 48px;
+    justify-content: center;
+}
+
+/* Logo */
+.navbar4-image1 {
+    width: 100px;
+    height: auto;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar4-navbar-interactive {
+        padding: 16px 24px;
+    }
+}
+@media screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Footer */
+footer {
+    position: relative;
+    width: calc(100% - 280px); /* خصم عرض السايدبار */
+    margin-left: 280px; /* جعل الفوتر يبدأ بعد السايدبار */
+    background-color: #286690;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+}
+#sidebar.hide ~ #content footer {
+    width: calc(100% - 60px); /* تحديث العرض عند تصغير السايدبار */
+    margin-left: 60px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-icons a {
+    margin: 0 15px;
+}
+
+footer .social-icons img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+}

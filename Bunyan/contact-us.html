@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact Us - Bunyan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="UnifidStyle.css" />
+  <style>
+    /* Contact Page Styling */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      margin-top: 80px; /* Ensures no overlap with navbar */
+    }
+
+    .contact-form {
+      background-color: #f7f7f7;
+      padding: 40px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .contact-form h2 {
+      color: #1d638b;
+      margin-bottom: 20px;
+    }
+
+    .contact-form p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    .contact-form button {
+      background-color: #1d638b;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #134b6e;
+    }
+
+    .cancel-button {
+      background-color: #ddd;
+      color: #1d638b;
+      margin-left: 10px;
+      border-radius: 25px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cancel-button:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar (Matches the reference) -->
+<header class="navbar4-container">
+  <div class="navbar4-navbar-interactive">
+    <a href="index.html" class="navbar4-navlink">
+      <img src="logo.png" alt="Logo" class="navbar4-image1" />
+    </a>
+    <div class="navbar4-desktop-menu">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="investment.html">Investment</a>
+      <a href="residential.html">Properties</a>
+    </div>
+    <a href="log-in.html" class="navbar4-action11">Log In</a>
+  </div>
+</header>
+
+<!-- Contact Form -->
+<div class="contact-container">
+  <form class="contact-form">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Feel free to reach out to us. We’ll get back to you within 24 hours.</p>
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send</button>
+    <button type="button" class="cancel-button">Cancel</button>
+  </form>
+</div>
+
+<!-- Footer (Matches the reference) -->
+<footer>
+  <p>&copy; 2025 Bunyan. All Rights Reserved.</p>
+  <a href="about-us.html">About Us</a>
+  <a href="contact-us.html">Contact Us</a>
+  <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=FFFFFF" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="https://shop.alharamainperfumes.com/media/wysiwyg/social_media_icon-02.png" alt="Facebook" />
+    </a>
+    <a href="https://wa.me/" target="_blank">
+      <img src="https://img.icons8.com/?size=100&id=118638&format=png&color=FFFFFF" alt="WhatsApp" />
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
